@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: powderblue;
+}
+.screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 30px;
+  margin: 20px;
+  border: 2px solid black;
+  width: 500px;
+  height: 50px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.display{
+  flex: 3;
+  text-align: right;
+}
+.delete{
+  flex: 1;
+  height: 50px;
+  border: 0px;
+  border-radius: 7px;
+  font-size: 20px;
+}
+.row {
+  display: flex;
+}
+
+.button{
+  flex: 1;
+  width: 122px;
+  height: 90px;
+  font-size: 25px;
+  margin: 2px;
+  border-radius: 10px;
+}
+#zero {
+  flex: 2.2;
+}
+#divide, #multiply, #add, #substract, #equal{
+  background-color: skyblue;
+}
+#clear {
+  background-color: lightcoral;
+}
