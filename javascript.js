@@ -17,9 +17,11 @@ let resultDisplayed = false;
 function write(textArea, num){
   if (resultDisplayed === true) {
     textArea.textContent = num;
+    if (textArea.textContent.length > 15) {textArea.textContent = textArea.textContent.substring(0, textArea.textContent.length-1)};
     resultDisplayed = false;}
   else {
     textArea.textContent += num;
+    if (textArea.textContent.length > 15) {textArea.textContent = textArea.textContent.substring(0, textArea.textContent.length-1)};
   }
 }
 
@@ -117,4 +119,10 @@ clear.addEventListener("click", ()=>{
 })
 
 const deleteButton = document.querySelector(".delete");
-deleteButton.addEventListener("click", ()=>display.textContent = display.textContent.substring(0, display.textContent.length-1))
+deleteButton.addEventListener("click", ()=>display.textContent = display.textContent.substring(0, display.textContent.length-1));
+
+let font = display.style.fontSize;
+while (display.textContent.length > 15) {
+  font -= 2;
+  display.style.fontSize = `${font}` ;
+}
