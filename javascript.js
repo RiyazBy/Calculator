@@ -17,11 +17,11 @@ let resultDisplayed = false;
 function write(textArea, num){
   if (resultDisplayed === true) {
     textArea.textContent = num;
-    if (textArea.textContent.length > 15) {textArea.textContent = textArea.textContent.substring(0, textArea.textContent.length-1)};
+    if (textArea.textContent.length > 14) {textArea.textContent = textArea.textContent.substring(0, textArea.textContent.length-1)};
     resultDisplayed = false;}
   else {
     textArea.textContent += num;
-    if (textArea.textContent.length > 15) {textArea.textContent = textArea.textContent.substring(0, textArea.textContent.length-1)};
+    if (textArea.textContent.length > 14) {textArea.textContent = textArea.textContent.substring(0, textArea.textContent.length-1)};
   }
 }
 
@@ -55,7 +55,7 @@ function storeNumber1() {
   if (display.textContent === "") {return number1 = 0}
   else {
     number1 = parseFloat(display.textContent);
-    display.textContent="";
+    resultDisplayed = true;
   }
 }
 
@@ -82,23 +82,23 @@ function operate(){
   }
 const addition = document.querySelector("#add");
 addition.addEventListener("click", ()=>{
-  operator = "+"
-  storeNumber1();}                     
+  storeNumber1();
+  operator = "+";}                     
   )
 const susbstraction = document.querySelector("#substract");
 susbstraction.addEventListener("click", ()=>{
-  operator = "-"
-  storeNumber1();}                     
+  storeNumber1();
+  operator = "-";}                     
   )
 const multiplication = document.querySelector("#multiply");
 multiplication.addEventListener("click", ()=>{
-  operator = "*"
-  storeNumber1();}                     
+  storeNumber1();
+  operator = "*";}                     
   )
 const division = document.querySelector("#divide");
 division.addEventListener("click", ()=>{
-  operator = "/"
-  storeNumber1();}                     
+  storeNumber1();
+  operator = "/";}                     
   )
 const equal = document.querySelector("#equal");
 equal.addEventListener("click", ()=>{
